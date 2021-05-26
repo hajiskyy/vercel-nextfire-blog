@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "../lib/context";
 
 interface Props {
 
@@ -6,8 +8,7 @@ interface Props {
 
 const Navabar = (props: Props) => {
 
-  const user = null;
-  const username = null;
+  const { user, username } = useContext(UserContext)
 
   return (
     <nav className='navbar'>
@@ -27,6 +28,9 @@ const Navabar = (props: Props) => {
               </Link>
             </li>
             <li>
+              <button>Sign Out</button>
+            </li>
+            <li>
               <Link href={`/${username}`}>
                 <img src={user?.photoURL} />
               </Link>
@@ -36,7 +40,7 @@ const Navabar = (props: Props) => {
 
 
         {/* user is not signed in OR has not created username */}
-        {!username && (
+        {!user && (
           <li>
             <Link href='/signin'>
               <button className='btn-blue'>Log in</button>
