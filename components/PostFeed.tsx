@@ -24,7 +24,7 @@ function PostItem({ post, admin = false }) {
       </Link>
       <Link href={`/${post.username}/${post.slug}`}>
         <h2>
-          <a>By @{post.title}</a>
+          <a>{post.title}</a>
         </h2>
       </Link>
 
