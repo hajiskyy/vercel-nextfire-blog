@@ -1,13 +1,17 @@
+import AuthCheck from "../../components/AuthCheck"
+
 interface Props {
 
 }
 
-const index = (props: Props) => {
+const AdminPostsPage = (props: Props) => {
   return (
     <main>
+      <AuthCheck>
 
+      </AuthCheck>
     </main>
   )
 }
 
-export default index
+export default AdminPostsPage
