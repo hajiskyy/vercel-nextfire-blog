@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next"
-import PostContent from "../../components/postContent";
+import PostContent from "../../components/PostContent";
 import { firestore, getUserWithUsername, postToJSON } from "../../lib/firebase";
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { Post } from "../../lib/type";
